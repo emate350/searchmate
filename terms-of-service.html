@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Phone Number | Information</title>
+  <title>Terms Of Service | SearchMate | Reverse Phone Lookup</title>
   <meta name="description" content="Looking for the owner of a phone number? Our reverse number lookup tool allows you to easily find the name and address associated with any phone number. Try it now for free!">
   <meta name="keywords" content="reverse number lookup, phone number lookup, phone number owner, find phone number owner, phone number search">
   <meta name="author" content="SearchMate">
@@ -13,7 +13,6 @@
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-  <script src="api.js"></script>
 
 
   <!-- Google Fonts -->
@@ -60,177 +59,87 @@
     </div>
   </header><!-- End Header -->
   <!-- End Header -->
-  
-    <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero d-flex align-items-center">
-    <div class="container">
-      <div class="row gy-4 d-flex justify-content-between">
-        <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-
-<form action="#" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200" onsubmit="return search();">
-   <input type="text" class="form-control" id="phoneNumber" placeholder="(000) 000-0000" oninput="formatNumber()" onpaste="formatNumber()" maxlength="16">
-   <button type="submit" class="btn btn-primary">Search</button>
-</form>
-
-<script>
-function formatNumber() {
-  let phoneNumber = document.getElementById('phoneNumber');
-  phoneNumber.value = phoneNumber.value.replace(/[^\d]/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
-}
-
-function search() {
-   // Get the phone number from the input field
-   const phoneNumber = document.getElementById('phoneNumber').value;
-   
-   // Redirect to the result page with the phone number as a query parameter
-   window.location.href = `info.html?number=${phoneNumber}`;
-   return false;
-}
-</script>
-
-
-      </div>
-    </div>
-  </section><!-- End Hero Section -->
 
   <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs">
+      <div class="page-header d-flex align-items-center" style="background-image: url('assets/img/blue-bg.webp');">
+        <div class="container position-relative">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-6 text-center">
+              <h2>Terms of Service</h2>
+            </div>
+          </div>
+        </div>
+      </div>
       <nav>
         <div class="container">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li>Contact</li>
+            <li>Terms Of Service</li>
           </ol>
         </div>
       </nav>
     </div><!-- End Breadcrumbs -->
-	
 
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
+    <!-- ======= Service Details Section ======= -->
+    <section id="service-details" class="service-details">
       <div class="container" data-aos="fade-up">
 
-		
-		
-		
-        <div class="row gy-4 mt-2">
+        <div class="row gy-4">
 
           <div class="col-lg-4">
-				
-            <div class="info-item d-flex" id="api-first-name">
-              <i class="bi bi-person-circle flex-shrink-0"></i>
-              <div>
-                <h4>First Name</h4>
-                <p> </p>
-              </div>
-            </div><!-- End Info Item -->
+            <div class="services-list">
+              <a>Terms of Service</a>
+            </div>
 
-            <div class="info-item d-flex" id="api-middle-name">
-              <i class="bi bi-person-circle flex-shrink-0"></i>
-              <div>
-                <h4>Middle Name:</h4>
-                <p>info@example.com</p>
-              </div>
-            </div><!-- End Info Item -->
-
-            <div class="info-item d-flex" id="api-last-name">
-              <i class="bi bi-person-circle flex-shrink-0"></i>
-              <div>
-                <h4>Last Name:</h4>
-                <p> </p>
-              </div>
-            </div><!-- End Info Item -->
-
-            <div class="info-item d-flex" id="api-phone">
-              <i class="bi bi-phone flex-shrink-0"></i>
-              <div>
-                <h4>Number:</h4>
-                <p> </p>
-              </div>
-            </div><!-- End Info Item -->
-			
           </div>
 
-          <div class="col-lg-4">
-            <div class="info-item d-flex" id="api-address">
-              <i class="bi bi-geo flex-shrink-0"></i>
-              <div>
-                <h4>Address:</h4>
-                <p> </p>
-              </div>
-            </div><!-- End Info Item -->
-			
-            <div class="info-item d-flex" id="api-city">
-              <i class="bi bi-geo flex-shrink-0"></i>
-              <div>
-                <h4>City:</h4>
-                <p> </p>
-              </div>
-            </div><!-- End Info Item -->
+          <div class="col-lg-8" id="tos1">
+            <h3>Terms Of Service</h3>
+            <p><br/>
+              Welcome to SearchMate! <br/><br/>The following terms and conditions ("Terms") govern your use of our services, including our website and any content, data, or other materials provided through our website (collectively, the "Service").<br/><br/> By accessing or using the Service, you agree to be bound by these Terms. <br/><br/>If you do not agree to these Terms, you may not use the Service.
+            </p>
+            <ul><br/>
+              <li><i class="bi bi-check-circle"></i> <span>Use of the Service </span></li>
+			  <p>You may use the Service solely for your own personal or internal business purposes. You may not use the Service for any other purpose, including any commercial purpose, without the prior written consent of SearchMate.
+		<br/>	  <br/>
+		You may not use the Service in any way that:<br/>
 
-            <div class="info-item d-flex" id="api-zip">
-              <i class="bi bi-geo flex-shrink-0"></i>
-              <div>
-                <h4>Zip:</h4>
-                <p> </p>
-              </div>
-            </div><!-- End Info Item -->
+<li>Violates any applicable federal, state, local, or international law or regulation;</li><br/>
 
-            <div class="info-item d-flex" id="api-state">
-              <i class="bi bi-geo flex-shrink-0"></i>
-              <div>
-                <h4>State:</h4>
-                <p> </p>
-              </div>
-            </div><!-- End Info Item -->
-			
-          </div>
+<li>Is fraudulent, deceptive, or misleading;</li><br/>
 
-          <div class="col-lg-4">
-            <div class="info-item d-flex" id="api-gender">
-              <i class="bi bi-people-fill flex-shrink-0"></i>
-              <div>
-                <h4>Gender:</h4>
-                <p> </p>
-              </div>
-            </div><!-- End Info Item -->
-			
-            <div class="info-item d-flex" id="api-stay-years">
-              <i class="bi bi-house-heart-fill flex-shrink-0"></i>
-              <div>
-                <h4>Length of Residency:</h4>
-                <p> </p>
-              </div>
-            </div><!-- End Info Item -->
+<li>Infringes upon the intellectual property rights of SearchMate or any third party;</li><br/>
 
-            <div class="info-item d-flex" id="api-house-income">
-              <i class="bi bi-cash-coin flex-shrink-0"></i>
-              <div>
-                <h4>Estimated Household Income:</h4>
-                <p> </p>
-              </div>
-            </div><!-- End Info Item -->
-			
-            <div class="info-item d-flex" id="api-market-value">
-              <i class="bi bi-house-add-fill flex-shrink-0"></i>
-              <div>
-                <h4>Home Market Value:</h4>
-                <p> </p>
-              </div>
-            </div><!-- End Info Item -->
-			
+<li>Is defamatory, libelous, threatening, or harassing; or</li><br/>
+
+<li>Is harmful to the interests of SearchMate or any third party.</li><br/>
+</p>
+              <li><i class="bi bi-check-circle"></i> <span>Intellectual Property</span></li>
+			  <p>The Service and all content and materials included on the Service, including but not limited to text, graphics, logos, images, and software, are the property of SearchMate or its licensors and are protected by U.S. and international copyright and trademark laws.
+		<br/>	  <br/>
+		You may not use any content or materials on the Service for any commercial purpose without the express written consent of SearchMate.<br/>
+
+</p>
+              <li><i class="bi bi-check-circle"></i> <span>Disclaimer of Warranties</span></li>
+            </ul>
+            <p>
+The Service is provided "as is," without warranty of any kind. SearchMate hereby disclaims all warranties, either express or implied, including but not limited to the implied warranties of merchantability and fitness for a particular purpose. SearchMate does not warrant that the Service will be uninterrupted or error-free. In no event shall SearchMate be liable for any damages whatsoever, including but not limited to direct, indirect, special, incidental, or consequential damages, arising out of or in connection with the use or inability to use the Service.
+<br/><br/>
+SearchMate does not warrant or guarantee the accuracy, completeness, timeliness, reliability, suitability, or availability of the Service or the Data. SearchMate shall have no liability for any errors or omissions in the Data or for any actions taken or not taken based on reliance on the Data.
+<br/><br/>
+SearchMate does not endorse or assume any liability for the content, products, or services available through the Service. Any reliance you place on such information is strictly at your own risk.
+<br/><br/>
+SearchMate makes no representation or warranty that the Service or the Data will meet your requirements or that access to the Service will be uninterrupted or error-free. SearchMate will not be liable for any delays, interruptions, errors, or omissions, regardless of the cause.
+            </p>
           </div>
 
         </div>
-		<br/><br/>
-<div id="map">
-  <iframe style="border:0; width: 100%; height: 340px;" src="https://maps.google.com/maps?q=${data['Latitude']},${data['Longitude']}&hl=es&z=14&amp;output=embed" frameborder="0" allowfullscreen></iframe>
-</div><!-- End Google Maps -->
-		
+
       </div>
-    </section><!-- End Contact Section -->
+    </section><!-- End Service Details Section -->
 
   </main><!-- End #main -->
 
@@ -305,9 +214,7 @@ function search() {
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
-
   <!-- Template Main JS File -->
-
   <script src="assets/js/main.js"></script>
 
 </body>
