@@ -2,7 +2,7 @@
 async function getapi(phoneNumber) {
   try {
     // Use the phone number to construct the API URL
-    const api_url = `http://127.0.0.1:3000/leads/${encodeURIComponent(phoneNumber)}`;
+    const api_url = `http://38.242.239.105/leads/${encodeURIComponent(phoneNumber)}`;
 
     // Storing response
     const response = await fetch(api_url);
