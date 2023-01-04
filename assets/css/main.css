@@ -18,9 +18,9 @@
 
 /* Colors */
 :root {
-  --color-default: #0a0d13;
-  --color-primary: #0d42ff;
-  --color-secondary: #0e1d34;
+  --color-default: #010117;
+  --color-primary: #3330E4;
+  --color-secondary: black;
 }
 
 /* Smooth scroll behavior */
@@ -308,7 +308,8 @@ section {
 }
 
 .header.sticked {
-  background: rgba(14, 29, 52, 0.9);
+background: rgb(6,2,25);
+background: linear-gradient(90deg, rgba(6,2,25,0.9808298319327731) 0%, rgba(6,6,22,0.9780287114845938) 57%, rgba(99,14,81,1) 90%);
   padding: 15px 0;
   box-shadow: 0px 2px 20px rgba(14, 29, 52, 0.1);
 }
