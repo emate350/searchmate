@@ -86,17 +86,9 @@
 
 <form action="#" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200" onsubmit="return search();">
    <input type="text" class="form-control" id="phoneNumber" placeholder="(000) 000-0000" oninput="formatNumber()" onpaste="formatNumber()" maxlength="16">
-   <button type="submit" onclick="makeRequest()" class="btn btn-primary">Search</button>
+   <button type="submit" class="btn btn-primary">Search</button>
 </form>
-<script>
-  function makeRequest() {
-    fetch(url, {
-      headers: {
-        'Access-Control-Allow-Origin': '*'
-      }
-    });
-  }
-  
+
 <script>
 function formatNumber() {
   let phoneNumber = document.getElementById('phoneNumber');
@@ -145,7 +137,7 @@ function search() {
             <div class="col-lg-3 col-6">
               <div class="stats-item text-center w-100 h-100">
                 <span data-purecounter-start="0" data-purecounter-end="200" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Millions Business</p>
+                <p>Million Business</p>
               </div>
             </div><!-- End Stats Item -->
 
