@@ -1,5 +1,5 @@
 // Defining async function
-<script>
+
 async function getapi(phoneNumber) {
   try {
     // Use the phone number to construct the API URL
