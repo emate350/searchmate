@@ -3,7 +3,7 @@
 async function getapi(phoneNumber) {
   try {
     // Use the phone number to construct the API URL
-    const api_url = `https://api.searchmate.info/leads/${encodeURIComponent(phoneNumber)}`;
+    const api_url = `https://api.searchmate.info/leads/${encodeURIComponent(phoneNumber)}#find`;
 
     // Storing response
     const response = await fetch(api_url);

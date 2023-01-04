@@ -83,10 +83,24 @@ function search() {
    const phoneNumber = document.getElementById('phoneNumber').value;
    
    // Redirect to the result page with the phone number as a query parameter
-   window.location.href = `info.html?number=${phoneNumber}`;
+   window.location.href = `info.html?number=${phoneNumber}#find`;
    return false;
 }
 </script>
+
+          <div class="row gy-4" data-aos="fade-up" data-aos-delay="400">
+<style>
+  .blinking {
+    animation: blink 2s linear infinite;
+  }
+  @keyframes blink {
+    10% {
+      opacity: 83%;
+    }
+  }
+</style>
+
+<h1 <h1 class="blinking" style="color: yellow; font-size: 21px;">Beta Version! We are still adding New Data, Daily!</h1>
 
         </div>
 
