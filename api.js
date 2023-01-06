@@ -29,6 +29,8 @@ async function getapi(phoneNumber) {
       }
 
       console.log(data);
+	  
+	  document.querySelector('#people-section').classList.remove('hidden');
 		
 	  document.title = `${data['Phone']} | SearchMate Phone, Name, Address Search`;	
       // Set the innerHTML of the element to the HTML string
