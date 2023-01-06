@@ -9,12 +9,6 @@ async function getapi(phoneNumber) {
     // Storing response
     const response = await fetch(api_url);
 
-    // Show the loading bar
-    document.querySelector('#loading-bar').style.display = 'block';
-
-    // Set the width of the loading bar to 0
-    document.querySelector('#loading-bar').style.width = '0%';
-
     if (response.ok) {
       // Get the response text
       const responseText = await response.text();
@@ -50,13 +44,6 @@ async function getapi(phoneNumber) {
 	  document.querySelector('#map').innerHTML = `
 		<iframe style="border:0; width: 100%; height: 340px;" src="https://maps.google.com/maps?q=${data['Latitude']},${data['Longitude']}&hl=es&z=14&amp;output=embed" frameborder="0" allowfullscreen></iframe>`;
 	  
-      // Set the width of the loading bar to 100% to indicate that the data has been fetched
-      document.querySelector('#loading-bar').style.width = '100%';
-
-      // Hide the loading bar after a short delay
-      setTimeout(function() {
-        document.querySelector('#loading-bar').style.display = 'none';
-      }, 500);
     } else {
       // Redirect to the error page
       window.location.href = 'error.html';
@@ -64,19 +51,18 @@ async function getapi(phoneNumber) {
   } catch (error) {
     // Log the error to the console
     console.error(error);
-	
-	// Hide the loading bar
-	document.querySelector('#loading-bar').style.display = 'none';
-	
-	// Redirect to the error page
 	window.location.href = 'error.html';
   }
 }
+
+
 
 // Get the phone number from the query string
 let phoneNumber = new URLSearchParams(window.location.search).get('number');
 
 // Call the getapi function with the phone number
 getapi(phoneNumber);
+
+
 
 
