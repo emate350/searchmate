@@ -62,9 +62,7 @@ async function getapi(phoneNumber) {
   } catch (error) {
     // Log the error to the console
     console.error(error);
-	
-	// Hide the loading bar
-	document.querySelector('#loading-bar').style.display = 'none';
+
 	
 	// Redirect to the error page
 	window.location.href = 'error.html';
@@ -73,6 +71,15 @@ async function getapi(phoneNumber) {
 
 // Get the phone number from the query string
 let phoneNumber = new URLSearchParams(window.location.search).get('number');
+
+let phoneNumberRegex = /^\(\d{3}\) \d{3}-\d{4}$/;
+if (phoneNumberRegex.test(phoneNumber)) {
+  // The phone number is in the correct format, so we can call the getapi function
+  getapi(phoneNumber);
+} else {
+  // The phone number is not in the correct format, so we redirect to the error page
+  window.location.href = 'error.html';
+}
 
 // Call the getapi function with the phone number
 getapi(phoneNumber);
