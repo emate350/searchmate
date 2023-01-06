@@ -4,6 +4,7 @@ async function getapi(phoneNumber) {
   try {
     // Use the phone number to construct the API URL
     const api_url = `https://api.searchmate.info/leads/${encodeURIComponent(phoneNumber)}#find`;
+	const currentUrl = window.location.href;
 
     // Storing response
     const response = await fetch(api_url);
@@ -22,8 +23,11 @@ async function getapi(phoneNumber) {
       }
 
       console.log(data);
-
+		
+	  document.title = `${data['Phone']} | SearchMate Phone, Name, Address Search`;	
       // Set the innerHTML of the element to the HTML string
+	  
+      document.querySelector('#person-number').innerHTML = `<a href="${currentUrl}">${data['Phone']}</a>`;
       document.querySelector('#api-first-name p').innerHTML = data['First Name'];
       document.querySelector('#api-middle-name p').innerHTML = data['Middle Initial'];
       document.querySelector('#api-last-name p').innerHTML = data['Last Name'];
@@ -47,6 +51,7 @@ async function getapi(phoneNumber) {
   } catch (error) {
     // Log the error to the console
     console.error(error);
+	window.location.href = 'error.html';
   }
 }
 
