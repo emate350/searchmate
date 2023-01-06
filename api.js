@@ -1,10 +1,9 @@
 // Defining async function
-
 async function getapi(phoneNumber) {
   try {
     // Use the phone number to construct the API URL
     const api_url = `https://api.searchmate.info/leads/${encodeURIComponent(phoneNumber)}#find`;
-	const currentUrl = window.location.href;
+    const currentUrl = window.location.href;
 
     // Storing response
     const response = await fetch(api_url);
@@ -23,14 +22,14 @@ async function getapi(phoneNumber) {
       }
 
       console.log(data);
-	  
-	  document.querySelector('.spinner-border').remove();
 
-	  document.querySelector('#people-section').classList.remove('hidden');
-		
-	  document.title = `${data['Phone']} | SearchMate Phone, Name, Address Search`;	
+      document.querySelector('.spinner-border').remove();
+
+      document.querySelector('#people-section').classList.remove('hidden');
+
+      document.title = `${data['Phone']} | SearchMate Phone, Name, Address Search`;
       // Set the innerHTML of the element to the HTML string
-	  
+
       document.querySelector('#person-number').innerHTML = `<a href="${currentUrl}">${data['Phone']}</a>`;
       document.querySelector('#api-first-name p').innerHTML = data['First Name'];
       document.querySelector('#api-middle-name p').innerHTML = data['Middle Initial'];
@@ -45,27 +44,19 @@ async function getapi(phoneNumber) {
       document.querySelector('#api-city p').innerHTML = data['Physical City'];
       document.querySelector('#api-house-income p').innerHTML = data['Estimated Household Income'];
       document.querySelector('#api-market-value p').innerHTML = data['Home Market Value'];
-	  document.querySelector('#map').innerHTML = `
+      document.querySelector('#map').innerHTML = `
 		<iframe style="border:0; width: 100%; height: 340px;" src="https://maps.google.com/maps?q=${data['Latitude']},${data['Longitude']}&hl=es&z=14&amp;output=embed" frameborder="0" allowfullscreen></iframe>`;
-	  
-      // Set the width of the loading bar to 100% to indicate that the data has been fetched
-      document.querySelector('#loading-bar').style.width = '100%';
-
-      // Hide the loading bar after a short delay
-      setTimeout(function() {
-        document.querySelector('#loading-bar').style.display = 'none';
-      }, 500);
     } else {
       // Redirect to the error page
       window.location.href = 'error.html';
+      return;
     }
   } catch (error) {
     // Log the error to the console
     console.error(error);
 
-	
-	// Redirect to the error page
-	window.location.href = 'error.html';
+    // Redirect to the error page
+    window.location.href = 'error.html';
   }
 }
 
@@ -74,14 +65,7 @@ let phoneNumber = new URLSearchParams(window.location.search).get('number');
 
 let phoneNumberRegex = /^\(\d{3}\) \d{3}-\d{4}$/;
 if (phoneNumberRegex.test(phoneNumber)) {
-  // The phone number is in the correct format, so we can call the getapi function
   getapi(phoneNumber);
 } else {
-  // The phone number is not in the correct format, so we redirect to the error page
   window.location.href = 'error.html';
 }
-
-// Call the getapi function with the phone number
-getapi(phoneNumber);
-
-
