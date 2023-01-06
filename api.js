@@ -9,12 +9,6 @@ async function getapi(phoneNumber) {
     // Storing response
     const response = await fetch(api_url);
 
-    // Show the loading bar
-    document.querySelector('#loading-bar').style.display = 'block';
-
-    // Set the width of the loading bar to 0
-    document.querySelector('#loading-bar').style.width = '0%';
-
     if (response.ok) {
       // Get the response text
       const responseText = await response.text();
@@ -30,6 +24,8 @@ async function getapi(phoneNumber) {
 
       console.log(data);
 	  
+	  document.querySelector('.spinner-border').remove();
+
 	  document.querySelector('#people-section').classList.remove('hidden');
 		
 	  document.title = `${data['Phone']} | SearchMate Phone, Name, Address Search`;	
