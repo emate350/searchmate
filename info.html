@@ -69,7 +69,7 @@
         <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center"><br/><br/>
 
 <form action="#" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200" onsubmit="return search();">
-   <input type="text" class="form-control" id="phoneNumber" placeholder="(000) 000-0000" oninput="formatNumber()" onpaste="formatNumber()" maxlength="16">
+   <input type="text" class="form-control" id="phoneNumber" placeholder="(000) 000-0000" oninput="formatNumber()" onpaste="formatNumber()" maxlength="14">
    <button type="submit" class="btn btn-primary">Search</button>
 </form>
 <style>
@@ -88,7 +88,11 @@
 <script>
 function formatNumber() {
   let phoneNumber = document.getElementById('phoneNumber');
-  phoneNumber.value = phoneNumber.value.replace(/[^\d]/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
+  if (phoneNumber.value.length >= 10) {
+    if (!phoneNumber.value.includes('(')) {
+      phoneNumber.value = phoneNumber.value.replace(/[^\d]/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
+    }
+  }
 }
 
 function search() {
@@ -147,7 +151,7 @@ function search() {
               <i class="bi bi-person-circle flex-shrink-0"></i>
               <div>
                 <h4>Middle Name:</h4>
-                <p>info@example.com</p>
+                <p> </p>
               </div>
             </div><!-- End Info Item -->
 

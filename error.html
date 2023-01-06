@@ -78,14 +78,18 @@
           <p data-aos="fade-up" data-aos-delay="100">Make sure number you entered is correct<br/>We're also adding new numbers; try again later to see if available.</p>
 
 <form action="#" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200" onsubmit="return search();">
-   <input type="text" class="form-control" id="phoneNumber" placeholder="(000) 000-0000" oninput="formatNumber()" onpaste="formatNumber()" maxlength="16">
+   <input type="text" class="form-control" id="phoneNumber" placeholder="(000) 000-0000" oninput="formatNumber()" onpaste="formatNumber()" maxlength="14">
    <button type="submit" class="btn btn-primary">Search</button>
 </form>
 
 <script>
 function formatNumber() {
   let phoneNumber = document.getElementById('phoneNumber');
-  phoneNumber.value = phoneNumber.value.replace(/[^\d]/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
+  if (phoneNumber.value.length >= 10) {
+    if (!phoneNumber.value.includes('(')) {
+      phoneNumber.value = phoneNumber.value.replace(/[^\d]/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
+    }
+  }
 }
 
 function search() {
