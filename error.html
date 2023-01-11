@@ -1,196 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>SearchMate | Number Lookup - Find the Owner of Any Phone Number Free </title>
-  <meta name="description" content="Looking for the owner of a phone number? Our reverse number lookup tool allows you to easily find the name and address associated with any phone number. Try it now for free!">
-  <meta name="keywords" content="reverse number lookup, phone number lookup, phone number owner, find phone number owner, phone number search">
-  <meta name="author" content="SearchMate">
-  
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HZR6FT8X44"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-HZR6FT8X44');
-</script>
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
-</head>
-
-<body>
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1>Search<span style="color:#2658fc;">Mate</span></h1>
-      </a>
-
-      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="features.html" >Features</a></li>
-          <li><a href="mailto:help@searchmate.info" target="_blank">Contact</a></li>
-          <li><a class="get-a-quote" href="index.html#">Search Now</a></li>
-        </ul>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
-  <!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero d-flex align-items-center">
-    <div class="container">
-      <div class="row gy-4 d-flex justify-content-between">
-        <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-          <h2 data-aos="fade-up">Number <br/>NOT Found</h2>
-          <p data-aos="fade-up" data-aos-delay="100">Make sure number you entered is correct<br/>We're also adding new numbers; try again later to see if available.</p>
-
-<form action="#" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200" onsubmit="return search();">
-   <input type="text" class="form-control" id="phoneNumber" placeholder="(000) 000-0000" oninput="formatNumber()" onpaste="formatNumber()" maxlength="14">
-   <button type="submit" class="btn btn-primary">Search</button>
-</form>
-
-<script>
-function formatNumber() {
-  let phoneNumber = document.getElementById('phoneNumber');
-  if (phoneNumber.value.length >= 10) {
-    if (!phoneNumber.value.includes('(')) {
-      phoneNumber.value = phoneNumber.value.replace(/[^\d]/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
-    }
-  }
-}
-
-function search() {
-   // Get the phone number from the input field
-   const phoneNumber = document.getElementById('phoneNumber').value;
-   
-   // Redirect to the result page with the phone number as a query parameter
-   window.location.href = `info.html?number=${phoneNumber}#find`;
-   return false;
-}
-</script>
-
-          <div class="row gy-4" data-aos="fade-up" data-aos-delay="400">
-<style>
-  .blinking {
-    animation: blink 2s linear infinite;
-  }
-  @keyframes blink {
-    10% {
-      opacity: 83%;
-    }
-  }
-</style>
-
-<h1 <h1 class="blinking" style="color: yellow; font-size: 21px;">Beta Version! We are still adding New Data, Daily!</h1>
-
-        </div>
-
-      </div>
-    </div>
-  </section><!-- End Hero Section -->
-<br/>
-<br/>
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-
-    <div class="container">
-      <div class="row gy-4">
-        <div class="col-lg-5 col-md-12 footer-info">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span>SearchMate</span>
-          </a>
-          <p><br/>Our team of dedicated professionals is committed to providing the most accurate and up-to-date information available. <br/><br/>We are constantly updating our database to ensure that our users can find the information they need quickly and easily.</p>
-          <div class="social-links d-flex mt-4">
-            <a href="" class="twitter"><i class="bi bi-twitter"></i></a>
-            <a href="" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="" class="linkedin"><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="features.html">Features</a></li>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="terms-of-service.html">Terms of Service</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-          <h4>Contact Us</h4>
-          <p>
-            SearchMate Support <br>
-            <strong>Email:</strong> help@searchmate.info<br>
-          </p>
-
-        </div>
-
-      </div>
-    </div>
-
-    <div class="container mt-4">
-      <div class="copyright">
-        &copy; Copyright <strong><span>SearchMate</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        Powered by <a>eMate</a>
-      </div>
-    </div>
-
-  </footer><!-- End Footer -->
-  <!-- End Footer -->
-
-  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
-
+   <head>
+      <meta charset="utf-8">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <title>SearchMate | Number Lookup - Find the Owner of Any Phone Number Free </title>
+      <meta name="description" content="Looking for the owner of a phone number? Our reverse number lookup tool allows you to easily find the name and address associated with any phone number. Try it now for free!">
+      <meta name="keywords" content="reverse number lookup, phone number lookup, phone number owner, find phone number owner, phone number search">
+      <meta name="author" content="SearchMate">
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-HZR6FT8X44"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         
+         gtag('config', 'G-HZR6FT8X44');
+      </script>
+      <!-- Favicons -->
+      <link href="assets/img/favicon.png" rel="icon">
+      <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+      <!-- Google Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+      <!-- Vendor CSS Files -->
+      <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+      <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+      <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+      <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+      <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+      <!-- Template Main CSS File -->
+      <link href="assets/css/main.css" rel="stylesheet">
+   </head>
+   <body>
+      <!-- ======= Header ======= -->
+      <header id="header" class="header d-flex align-items-center fixed-top">
+         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo d-flex align-items-center">
+               <!-- Uncomment the line below if you also wish to use an image logo -->
+               <!-- <img src="assets/img/logo.png" alt=""> -->
+               <h1>Search<span style="color:#2658fc;">Mate</span></h1>
+            </a>
+            <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+            <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+            <nav id="navbar" class="navbar">
+               <ul>
+                  <li><a href="index.html" class="active">Home</a></li>
+                  <li><a href="features.html" >Features</a></li>
+                  <li><a href="mailto:help@searchmate.info" target="_blank">Contact</a></li>
+                  <li><a class="get-a-quote" href="index.html#">Search Now</a></li>
+               </ul>
+            </nav>
+            <!-- .navbar -->
+         </div>
+      </header>
+      <!-- End Header -->
+      <!-- End Header -->
+      <!-- ======= Hero Section ======= -->
+      <section id="hero" class="hero d-flex align-items-center">
+         <div class="container">
+         <div class="row gy-4 d-flex justify-content-between">
+            <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+               <h2 data-aos="fade-up" id="person-number-error">Number</h2>
+               <form action="#" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200" onsubmit="return search();">
+                  <input type="text" class="form-control" id="phoneNumber" placeholder="(000) 000-0000" oninput="formatNumber()" onpaste="formatNumber()" maxlength="14">
+                  <button type="submit" class="btn btn-primary">Search</button>
+               </form>
+               <script>
+                  function formatNumber() {
+                    let phoneNumber = document.getElementById('phoneNumber');
+                    if (phoneNumber.value.length >= 10) {
+                      if (!phoneNumber.value.includes('(')) {
+                        phoneNumber.value = phoneNumber.value.replace(/[^\d]/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
+                      }
+                    }
+                  }
+                  
+                  function search() {
+                     // Get the phone number from the input field
+                     const phoneNumber = document.getElementById('phoneNumber').value;
+                     
+                     // Redirect to the result page with the phone number as a query parameter
+                     window.location.href = `info.html?number=${phoneNumber}#find`;
+                     return false;
+                  }
+               </script>
+               <div class="row gy-4">
+                  <style>
+                     .blinking {
+                     animation: blink 2s linear infinite;
+                     }
+                     @keyframes blink {
+                     10% {
+                     opacity: 83%;
+                     }
+                     }
+                  </style>
+                  <h1 class="blinking" style="color: yellow; font-size: 21px;">Beta Version! We are still adding New Data, Daily!</h1>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- End Hero Section -->
+      <br/>
+      <br/>
+      <!-- ======= Footer ======= -->
+      <footer id="footer" class="footer">
+         <div class="container">
+            <div class="row gy-4">
+               <div class="col-lg-5 col-md-12 footer-info">
+                  <a href="index.html" class="logo d-flex align-items-center">
+                  <span>SearchMate</span>
+                  </a>
+                  <p><br/>Our team of dedicated professionals is committed to providing the most accurate and up-to-date information available. <br/><br/>We are constantly updating our database to ensure that our users can find the information they need quickly and easily.</p>
+                  <div class="social-links d-flex mt-4">
+                     <a href="" class="twitter"><i class="bi bi-twitter"></i></a>
+                     <a href="" class="facebook"><i class="bi bi-facebook"></i></a>
+                     <a href="" class="instagram"><i class="bi bi-instagram"></i></a>
+                     <a href="" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                  </div>
+               </div>
+               <div class="col-lg-2 col-6 footer-links">
+                  <h4>Useful Links</h4>
+                  <ul>
+                     <li><a href="index.html">Home</a></li>
+                     <li><a href="features.html">Features</a></li>
+                     <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                     <li><a href="terms-of-service.html">Terms of Service</a></li>
+                  </ul>
+               </div>
+               <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+                  <h4>Contact Us</h4>
+                  <p>
+                     SearchMate Support <br>
+                     <strong>Email:</strong> help@searchmate.info<br>
+                  </p>
+               </div>
+            </div>
+         </div>
+         <div class="container mt-4">
+            <div class="copyright">
+               &copy; Copyright <strong><span>SearchMate</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+               Powered by <a>eMate</a>
+            </div>
+         </div>
+      </footer>
+      <!-- End Footer -->
+      <!-- End Footer -->
+      <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+      <div id="preloader"></div>
+      <!-- Vendor JS Files -->
+      <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+      <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+      <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+      <script src="assets/vendor/aos/aos.js"></script>
+      <script src="assets/vendor/php-email-form/validate.js"></script>
+      <!-- Template Main JS File -->
+      <script src="assets/js/main.js"></script>
+      <script>
+         function formatPhoneNumber(number) {
+          let formattedNumber = number.replace(/[^0-9]/g, "");
+          formattedNumber = formattedNumber.replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3");
+          return formattedNumber;
+         }
+         
+          document.addEventListener("DOMContentLoaded", function() {
+          let url = window.location.href;
+          let phoneNumber = url.split("#")[1];
+          phoneNumber = phoneNumber.replace(/%20/g, ''); // this will replace all 
+          console.log(phoneNumber)
+          document.querySelector('#person-number-error').innerHTML = `Not Available<br/><br/> <h3><span style="color:#2658fc;">${formatPhoneNumber(phoneNumber)}</span> added to <br/><b>REQUEST LIST</b> <br/><br/>It will be <span style="color:#2658fc;">AVAILABLE SOON</span>✅ <br/><br/>Check back again later, Thank You!</h3>`;
+         
+         });
+      </script>
+   </body>
 </html>
